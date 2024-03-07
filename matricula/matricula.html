@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opciones de Pago</title>
+<body>
+<script>
+    
+const valormatricula = 7000000
+let cuota1
+let cuota2
+let cuota3
+
+const pagocompleto = 1;
+const doscuotas = 2;
+const trescuotas = 3;
+
+let otrasopciones 
+let opcionseleccionada = parseInt(prompt("seleccione el metodo de pago\n1. pago completo\n2. a dos cuotas\n3. a tres cuotas"));
+
+if (opcionseleccionada == pagocompleto) {
+    alert ("el valor a pagar de la matricula es de: $" + valormatricula*0.95);
+} else if(opcionseleccionada == doscuotas) {
+    alert ("la primera cuota tiene un valor de: $" + valormatricula/2 )
+    alert ("la segunda cuota tiene un valor de: $" + valormatricula/2 * 1.02 )
+    alert ("el total a pagar es de: $" + valormatricula/2 * 1.02 + valormatricula/2)
+} else if(opcionseleccionada == trescuotas) {
+    alert("la primera cuota tiene un valor de: $" + valormatricula/3)
+    alert("la segunda cuota tiene un valor de: $" + valormatricula/3 * 1.02 )
+    alert("la tercera cuota tiene un valor de: $" + valormatricula/3 * 1.02 * 1.02 )
+    alert ("el total a pagar es de: $" + valormatricula/3 + valormatricula/3 * 1.02 + valormatricula/3 * 1.02 * 1.02.tofixed(3)  )
+} else if (opcionseleccionada < 1 > 3 ) {
+    alert("error")}
+</script>
+</body>
+</html>

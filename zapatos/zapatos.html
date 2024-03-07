@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Venta de Zapatos Deportivos</title>
+</head>
+<body>
+<script>
+const precioclasicos = 500000;
+const preciorunning = 800000;
+const preciobasketball = 1000000;
+const descuento = 0.1; 
+
+let modelo = parseInt(prompt("Seleccione el modelo de zapatos que desea: \n1 Clásicos \n2 Running \n3 Basketball"));
+
+switch (modelo) {
+     case 1 :
+         let talla1 = parseInt(prompt("Seleccione la talla de zapatos de (35-44):"));
+         if (talla1 >= 35 && talla1 <= 44) {
+             let cantidad1 = parseInt(prompt("Seleccione la cantidad de zapatos que va a comprar"));
+             if(cantidad1 >= 1 && cantidad1 <= 5) {
+               let valor1 = (precioclasicos * cantidad1);
+               if (cantidad1 >= 3) {
+                    valor1 -= valor1 * descuento; 
+               }
+               alert(`El total a pagar es: ${valor1}`);
+             }
+             else {
+                alert("No aplica esta cantidad");
+             }
+         }
+         else {
+            alert("Talla inválida");
+         } 
+         break;
+     case 2 : 
+         let talla2 = parseInt(prompt("Seleccione la talla de zapatos de 35 a 44"));
+         if (talla2 >= 35 && talla2 <= 44) {
+              let cantidad2 = parseInt(prompt("Seleccione la cantidad de zapatos que va a comprar"));
+                 if (cantidad2 >= 1 && cantidad2 <= 5) {
+                    let valor2 = preciorunning * cantidad2;
+                    if (cantidad2 >= 3) {
+                        valor2 -= valor2 * descuento; 
+                    }
+                    alert("El total a pagar es: " + valor2);
+                 }
+                 else {
+                    alert("No aplica esta cantidad");
+                 }
+         }
+         else {
+              alert("Talla inválida");
+         }
+      break;
+     case 3 : 
+         let talla3 = parseInt(prompt("Seleccione la talla de zapatos de 35 a 44"));
+         if (talla3 >= 35 && talla3 <= 44) {
+              let cantidad3 = parseInt(prompt("Seleccione la cantidad de zapatos que va a comprar"));
+                 if (cantidad3 >= 1 && cantidad3 <= 5) {
+                    let valor3 = preciobasketball * cantidad3;
+                    if (cantidad3 >= 3) {
+                        valor3 -= valor3 * descuento; 
+                    }
+                    alert("El total a pagar es: " + valor3);
+                 }
+                 else {
+                    alert("No aplica esta cantidad");
+                 }
+         }
+         else {
+              alert("Talla inválida");
+         }        
+      break;
+      default : 
+              alert("Modelo de zapatos no existente");
+      break;
+}
+</script>
+</body>
+</html>

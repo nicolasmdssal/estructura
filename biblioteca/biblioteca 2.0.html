@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>biblioteca</title>
+</head>
+<body>
+<script>
+const bestsellers = 500
+const literatura = 100
+const academicos = 0
+
+
+let opcionlibro = prompt("seleccione el libro que quiere solicitar \nbestsellers $500 dia \nliteratura $100 dia \nacademicos gratis")   
+
+if (opcionlibro === bestsellers) {
+      let dias =  parseInt(prompt("seleccione los dias que solicita el libro (de 1 a 30 dias)"))
+      let costoTotal
+         if (dias >= 1 && dias <= 30) {
+              if (dias > 10) {
+               costoTotal = (bestsellers * dias) * 0.9
+              } else {
+             costoTotal = bestsellers * dias;
+              }}
+         else {
+         alert ("no es posible esta cantidad de dias")
+         } 
+         alert("El costo total del préstamo es: $" + costoTotal.toFixed(2))
+    }
+else if (opcionlibro === literatura) {
+        let dias =  parseInt(prompt("seleccione los dias que solicita el libro (de 1 a 30 dias)"))
+         if (dias >= 1 && dias <= 30) {
+            let costoTotal
+              if (dias > 10) {
+               costoTotal = (literatura * dias) * 0.9
+              } else {
+             costoTotal = literatura * dias;
+              }
+              alert("El costo total del préstamo es: $" + costoTotal.toFixed(2))}
+         else {
+         alert ("no es posible esta cantidad de dias")
+         } 
+        }   
+else {
+    let dias = parseInt(prompt("seleccione los dias que solicita el libro (de 1 a 30 dias)"))
+     if (dias >= 1 && dias <= 30) {
+        alert ("libro solicitado con exito de forma gratuita")
+     }  
+     else {
+        alert ("no es posible esta cantidad de dias")   
+     }
+}
+</script>
+</body>
+</html>
